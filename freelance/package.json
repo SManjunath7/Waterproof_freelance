@@ -1,0 +1,8 @@
+{
+  "name": "mwp-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "install-all": "cd client && npm install && cd ../api && npm install"
+  }
+}
