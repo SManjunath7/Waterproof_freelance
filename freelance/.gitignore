@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+api/node_modules/
+
+# Build Outputs
+dist/
+client/dist/
+build/
+.vercel/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Databases
+*.db
+*.sqlite
+api/data/*.db
+server/data/*.db
+
+# IDEs & System Files
+.vscode/
+.idea/
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel Cache
+.vercel/

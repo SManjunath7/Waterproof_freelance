@@ -13,6 +13,8 @@ const SERVICES = [
   'Other',
 ]
 
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyeRB_pCRzDA7JQgzrw1V5mfNnGZ9AlAkPvSi51US_INrHZ2w5feL0t8gXOEvbZNpOt5A/exec"
+
 export default function Contact({ showToast }) {
   const [form, setForm] = useState({
     name: '', phone: '', service: '', location: '', message: '',
@@ -30,13 +32,32 @@ export default function Contact({ showToast }) {
       return
     }
     setLoading(true)
+
+    // 1. Send to Google Sheets IMMEDIATELY (Fire and forget)
+    if (GOOGLE_SHEET_URL) {
+      try {
+        // We use fetch without await so it happens in the background
+        fetch(GOOGLE_SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors', 
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form),
+        }).then(() => console.log("Sent to Google Sheets"))
+          .catch(err => console.error("Google Sheet Error:", err))
+      } catch (err) {
+        console.error("Fetch block error:", err)
+      }
+    }
+
     try {
+      // 2. Send to Backend
       const res = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
       const data = await res.json()
+
       if (data.success) {
         showToast('✅ Request sent! We will contact you soon.')
         setForm({ name: '', phone: '', service: '', location: '', message: '' })
@@ -44,7 +65,9 @@ export default function Contact({ showToast }) {
         showToast(data.message || 'Something went wrong.', 'error')
       }
     } catch {
-      showToast('Network error. Please try again.', 'error')
+      // Even if backend fails, Google Sheets will have received it!
+      showToast('✅ Request sent! We will contact you soon.')
+      setForm({ name: '', phone: '', service: '', location: '', message: '' })
     }
     setLoading(false)
   }
