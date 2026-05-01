@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjunatha Water Proofing – Bangalore's Most Trusted Waterproofing Experts</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --red: #d32f2f;
+            --blue: #1a3a6e;
+            --blue-light: #2563b8;
+            --blue-pale: #e8f0fb;
+            --white: #ffffff;
+            --off-white: #f5f7fa;
+            --gray: #6b7280;
+            --dark: #0f1d36;
+            --wave: #cfe3ff;
+            --accent: #e53935;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 25, 60, 0.97);
+            backdrop-filter: blur(10px);
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            border-radius: 6px;
+        }
+
+        .nav-logo span {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            color: #fff;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .nav-logo span em {
+            display: block;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 300;
+            color: var(--wave);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c8d8f4;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #b71c1c;
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 60, 0.98);
+            padding: 20px 5%;
+            z-index: 999;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #c8d8f4;
+            text-decoration: none;
+            padding: 14px 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* ===== HERO ===== */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1930 0%, #1a3a6e 50%, #0a1930 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+        }
+
+        .hero-bg-anim {
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E") repeat;
+            animation: bgDrift 30s linear infinite;
+            opacity: 0.4;
+        }
+
+        @keyframes bgDrift {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(-100px, -100px);
+            }
+        }
+
+        /* rain drops */
+        .raindrops {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .drop {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(100, 160, 255, 0.6));
+            animation: rain linear infinite;
+            border-radius: 2px;
+        }
+
+        @keyframes rain {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            line-height: 1;
+            color: #fff;
+            margin-bottom: 12px;
+            animation: slideUp 0.8s ease both;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text .tagline {
+            font-size: 1rem;
+            color: var(--wave);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 20px;
+            animation: slideUp 0.9s ease 0.1s both;
+        }
+
+        .hero-text p {
+            color: #a8c4e0;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin-bottom: 36px;
+            animation: slideUp 1s ease 0.2s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: slideUp 1s ease 0.3s both;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s;
+            box-shadow: 0 4px 20px rgba(213, 45, 45, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(213, 45, 45, 0.5);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s;
+        }
+
+        .btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+            animation: slideUp 1s ease 0.4s both;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.4rem;
+            color: var(--accent);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            color: var(--wave);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* hero visual side */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1.2s ease 0.3s both;
+        }
+
+        .hero-shield {
+            width: 340px;
+            height: 400px;
+            position: relative;
+        }
+
+        .shield-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 20px 60px rgba(37, 99, 184, 0.5));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .wave-divider {
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: scaleY(-1);
+        }
+
+        .wave-divider svg {
+            display: block;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 80px 5%;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            color: var(--dark);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        .section-desc {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            max-width: 560px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== SERVICES ===== */
+        #services {
+            background: var(--off-white);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .services-header .section-desc {
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: default;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue-light), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--blue-pale), #dbeafe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .service-tag {
+            display: inline-block;
+            margin-top: 14px;
+            background: var(--blue-pale);
+            color: var(--blue-light);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        /* ===== ABOUT ===== */
+        #about {
+            background: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-main-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--accent);
+            color: #fff;
+            padding: 24px 28px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(213, 45, 45, 0.4);
+        }
+
+        .about-badge .num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            line-height: 1;
+            display: block;
+        }
+
+        .about-badge .lbl {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .about-points {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .point {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .point-icon {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            border-radius: 8px;
+            background: var(--blue-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .point p {
+            font-size: 0.88rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        /* ===== PROCESS ===== */
+        #process {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a3a6e 100%);
+        }
+
+        #process .section-title {
+            color: #fff;
+        }
+
+        #process .section-label {
+            color: var(--wave);
+        }
+
+        #process .section-desc {
+            color: #a8c4e0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0;
+            margin-top: 56px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue-light), var(--accent));
+        }
+
+        .step {
+            text-align: center;
+            padding: 0 24px;
+            position: relative;
+        }
+
+        .step-num {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue-light), var(--accent));
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 6px 24px rgba(213, 45, 45, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .step:hover .step-num {
+            transform: scale(1.1);
+        }
+
+        .step h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 0.85rem;
+            color: #a8c4e0;
+            line-height: 1.6;
+        }
+
+        /* ===== CLIENTS ===== */
+        #clients {
+            background: var(--off-white);
+        }
+
+        .clients-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .clients-track-wrap {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 40px;
+            animation: marquee 18s linear infinite;
+            width: max-content;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .client-logo {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 36px;
+            height: 90px;
+            min-width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+            filter: grayscale(1) opacity(0.7);
+            transition: filter 0.3s;
+            flex-shrink: 0;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0) opacity(1);
+        }
+
+        .client-logo img {
+            max-height: 50px;
+            max-width: 140px;
+            object-fit: contain;
+        }
+
+        /* ===== WHY US ===== */
+        #why {
+            background: #fff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            padding: 22px;
+            border-radius: 14px;
+            background: var(--off-white);
+            transition: transform 0.25s, box-shadow 0.25s;
+            cursor: default;
+        }
+
+        .feature:hover {
+            transform: translateX(6px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .feat-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--blue-light), var(--dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .feature h4 {
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .feature p {
+            font-size: 0.86rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .why-visual {
+            background: linear-gradient(135deg, var(--dark), #1a3a6e);
+            border-radius: 24px;
+            padding: 44px;
+            color: #fff;
+        }
+
+        .why-visual h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 28px;
+            color: #fff;
+        }
+
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .coverage-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            transition: background 0.25s;
+        }
+
+        .coverage-item:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .coverage-item .ci {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .coverage-item p {
+            font-size: 0.82rem;
+            color: #c8d8f4;
+            font-weight: 500;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        #testimonials {
+            background: var(--off-white);
+        }
+
+        .testi-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .testi-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s;
+        }
+
+        .testi-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .testi-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            font-size: 5rem;
+            color: var(--blue-pale);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+
+        .testi-card p {
+            font-size: 0.92rem;
+            color: #4b5563;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testi-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue-light), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .testi-author h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .testi-author span {
+            font-size: 0.78rem;
+            color: var(--gray);
+        }
+
+        /* ===== CONTACT ===== */
+        #contact {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a3a6e 100%);
+            color: #fff;
+        }
+
+        #contact .section-title {
+            color: #fff;
+        }
+
+        #contact .section-label {
+            color: var(--wave);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding-top: 10px;
+        }
+
+        .contact-info p {
+            color: #a8c4e0;
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 26px;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .info-item h5 {
+            font-size: 0.78rem;
+            color: var(--wave);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .info-item p {
+            font-size: 0.95rem;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .info-item a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            color: var(--wave);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 36px;
+        }
+
+        .contact-form h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 28px;
+            color: #fff;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--wave);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.92rem;
+            outline: none;
+            transition: border-color 0.25s, background 0.25s;
+            -webkit-appearance: none;
+        }
+
+        .form-group select option {
+            background: var(--dark);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue-light);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.25s, transform 0.25s;
+        }
+
+        .btn-submit:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #050e1f;
+            padding: 50px 5% 28px;
+            color: #a8c4e0;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 36px;
+        }
+
+        .footer-brand img {
+            height: 60px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.88rem;
+            line-height: 1.75;
+            color: #7a9cc0;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #7a9cc0;
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-bottom p {
+            font-size: 0.82rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #a8c4e0;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        .social-btn:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* ===== FLOATING CTA ===== */
+        .floating-call {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--accent);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 999;
+            box-shadow: 0 6px 24px rgba(213, 45, 45, 0.5);
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 6px 24px rgba(213, 45, 45, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 6px 40px rgba(213, 45, 45, 0.8);
+            }
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+
+            .nav-links,
+            .nav-cta {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about-grid,
+            .why-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-badge {
+                bottom: -10px;
+                right: 10px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1/-1;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-box:last-child {
+                grid-column: 1/-1;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 14px;
+                text-align: center;
+            }
+
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .coverage-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <img src="/mnt/user-data/uploads/1777564066474_WhatsApp_Image_2026-04-29_at_8_11_59_AM.jpeg" alt="MWP Logo"
+                onerror="this.style.display='none'">
+            <span>Manjunatha<em>Water Proofing</em></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:9900497309" class="nav-cta">📞 Call Now</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="toggleMenu()">Home</a>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#clients" onclick="toggleMenu()">Clients</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a href="tel:9900497309" style="color:#e53935;margin-top:8px;">📞 9900497309</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg-anim"></div>
+        <!-- Rain drops -->
+        <div class="raindrops" id="raindrops"></div>
+
+        <div class="hero-content container">
+            <div class="hero-text">
+                <div class="tagline">Bangalore's Trusted Experts Since 2010</div>
+                <h1>Leak-Proof <span>Protection</span> for Every Structure</h1>
+                <p>Permanent waterproofing solutions without disturbing your existing structures. Expert service for
+                    terraces, bathrooms, slabs, sumps, tanks & more.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-primary">🔧 Get Free Quote</a>
+                    <a href="#services" class="btn-outline">🏗️ Our Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box"><span class="stat-num">15+</span><span class="stat-label">Years
+                            Experience</span></div>
+                    <div class="stat-box"><span class="stat-num">500+</span><span class="stat-label">Projects
+                            Done</span></div>
+                    <div class="stat-box"><span class="stat-num">100%</span><span class="stat-label">Guaranteed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shield">
+                    <svg class="shield-svg" viewBox="0 0 340 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="0" y1="0" x2="340" y2="400"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#1a3a6e" />
+                                <stop offset="100%" stop-color="#0a1930" />
+                            </linearGradient>
+                            <linearGradient id="accentGrad" x1="0" y1="0" x2="340" y2="100"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#e53935" />
+                                <stop offset="100%" stop-color="#d32f2f" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Shield body -->
+                        <path d="M170 20 L310 80 L310 220 Q310 330 170 380 Q30 330 30 220 L30 80 Z"
+                            fill="url(#shieldGrad)" stroke="rgba(100,160,255,0.3)" stroke-width="2" />
+                        <!-- Inner shield highlight -->
+                        <path d="M170 50 L285 98 L285 218 Q285 310 170 352 Q55 310 55 218 L55 98 Z"
+                            fill="rgba(255,255,255,0.04)" stroke="rgba(100,160,255,0.15)" stroke-width="1" />
+                        <!-- House icon -->
+                        <path d="M170 130 L230 170 L230 230 L200 230 L200 200 L140 200 L140 230 L110 230 L110 170 Z"
+                            fill="url(#accentGrad)" opacity="0.9" />
+                        <path d="M100 175 L170 125 L240 175" fill="none" stroke="#e53935" stroke-width="8"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <!-- Water drops -->
+                        <ellipse cx="130" cy="270" rx="10" ry="14" fill="rgba(100,160,255,0.6)" />
+                        <ellipse cx="170" cy="285" rx="10" ry="14" fill="rgba(100,160,255,0.8)" />
+                        <ellipse cx="210" cy="270" rx="10" ry="14" fill="rgba(100,160,255,0.6)" />
+                        <!-- X cancel over drops (protected) -->
+                        <path d="M115 258 L145 282 M145 258 L115 282" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+                        <!-- Checkmark -->
+                        <circle cx="230" cy="120" r="26" fill="#22c55e" opacity="0.9" />
+                        <path d="M218 120 L226 130 L244 110" stroke="#fff" stroke-width="3.5" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <!-- Waves at bottom -->
+                        <path d="M55 310 Q100 295 145 310 Q190 325 235 310 Q280 295 285 310"
+                            stroke="rgba(100,160,255,0.4)" stroke-width="3" fill="none" />
+                        <path d="M60 325 Q105 310 150 325 Q195 340 240 325 Q275 315 282 325"
+                            stroke="rgba(100,160,255,0.25)" stroke-width="2.5" fill="none" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE -->
+    <div style="background:var(--off-white);margin-top:-2px">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" style="display:block">
+            <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="var(--dark)" />
+        </svg>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="services-header reveal">
+                <div class="section-label">What We Offer</div>
+                <div class="section-title">Our <span>Waterproofing</span> Services</div>
+                <p class="section-desc">Comprehensive solutions for all types of structures — from residential homes to
+                    large commercial buildings. No disruption to your existing structure.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🏠</div>
+                    <h3>Terrace Waterproofing</h3>
+                    <p>Advanced terrace waterproofing with slope correction. Prevents seepage and extends the life of
+                        your roof slab by decades.</p>
+                    <span class="service-tag">Most Popular</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🚿</div>
+                    <h3>Bathroom Waterproofing</h3>
+                    <p>Complete bathroom and toilet waterproofing without breaking tiles. Our non-destructive method
+                        saves time and cost.</p>
+                    <span class="service-tag">Non-Destructive</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Slab Waterproofing</h3>
+                    <p>Structural slab and basement waterproofing using crystalline and polymer-based coatings for
+                        permanent protection.</p>
+                    <span class="service-tag">Permanent Fix</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">💧</div>
+                    <h3>Sump & Tank Waterproofing</h3>
+                    <p>Water sump and overhead tank lining with food-grade, non-toxic materials to ensure clean and
+                        leak-free water storage.</p>
+                    <span class="service-tag">Safe & Non-Toxic</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🌧️</div>
+                    <h3>Skylight & AC Sheet</h3>
+                    <p>Sealing of skylight joints, AC sheet overlaps, and roof penetrations that commonly cause major
+                        water ingress problems.</p>
+                    <span class="service-tag">Specialty Work</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🧱</div>
+                    <h3>Wall Crack & Paint</h3>
+                    <p>Exterior wall waterproofing, crack injection, and waterproof paint application to protect against
+                        dampness and mold.</p>
+                    <span class="service-tag">Complete Solution</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual reveal-left">
+                    <!-- SVG illustration as placeholder for company image -->
+                    <svg viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg" class="about-main-img"
+                        style="background:linear-gradient(135deg,#0a1930,#1a3a6e)">
+                        <defs>
+                            <linearGradient id="bldGrad" x1="0" y1="0" x2="0" y2="380" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#1a3a6e" />
+                                <stop offset="100%" stop-color="#0a1930" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="500" height="380" fill="url(#bldGrad)" />
+                        <!-- Building -->
+                        <rect x="140" y="120" width="220" height="200" fill="#1e4080" rx="4" />
+                        <rect x="155" y="100" width="190" height="30" fill="#2563b8" rx="3" />
+                        <!-- Windows -->
+                        <rect x="165" y="145" width="40" height="40" fill="#93c5fd" rx="3" opacity="0.7" />
+                        <rect x="230" y="145" width="40" height="40" fill="#93c5fd" rx="3" opacity="0.5" />
+                        <rect x="295" y="145" width="40" height="40" fill="#93c5fd" rx="3" opacity="0.7" />
+                        <rect x="165" y="205" width="40" height="40" fill="#93c5fd" rx="3" opacity="0.5" />
+                        <rect x="230" y="205" width="40" height="40" fill="#93c5fd" rx="3" opacity="0.7" />
+                        <rect x="295" y="205" width="40" height="40" fill="#93c5fd" rx="3" opacity="0.5" />
+                        <!-- Door -->
+                        <rect x="220" y="270" width="60" height="50" fill="#1e4080" rx="4" />
+                        <!-- Shield badge -->
+                        <path d="M250 40 L290 58 L290 95 Q290 125 250 140 Q210 125 210 95 L210 58 Z" fill="#e53935"
+                            opacity="0.9" />
+                        <path d="M238 90 L246 100 L264 78" stroke="#fff" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <!-- Rain drops -->
+                        <text x="70" y="160" font-size="28" opacity="0.5">💧</text>
+                        <text x="380" y="200" font-size="24" opacity="0.4">💧</text>
+                        <text x="90" y="250" font-size="20" opacity="0.3">💧</text>
+                        <!-- Worker figure -->
+                        <circle cx="420" cy="220" r="18" fill="#e53935" opacity="0.8" />
+                        <rect x="407" y="238" width="26" height="40" fill="#1a3a6e" rx="4" />
+                        <text x="390" y="295" font-size="11" fill="#93c5fd" opacity="0.7">Manjunatha MWP</text>
+                        <!-- Ground -->
+                        <rect x="0" y="320" width="500" height="60" fill="#050e1f" opacity="0.5" />
+                        <!-- Waves -->
+                        <path d="M0 325 Q125 310 250 325 Q375 340 500 325" stroke="rgba(100,160,255,0.3)"
+                            stroke-width="2.5" fill="none" />
+                    </svg>
+                    <div class="about-badge">
+                        <span class="num">15+</span>
+                        <div class="lbl">Years of<br>Excellence</div>
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <div class="section-label">Who We Are</div>
+                    <div class="section-title">Manjunatha<br><span>Water Proofing</span></div>
+                    <p class="section-desc" style="max-width:100%;margin-bottom:20px">We are one of Bangalore's leading
+                        waterproofing contractors, specialising in non-destructive, permanent solutions for residential
+                        and commercial properties.</p>
+                    <p style="color:var(--gray);font-size:0.9rem;line-height:1.8;margin-bottom:24px">Our expert team led
+                        by <strong>Mrutyunkshappa H.</strong> brings years of on-site experience in delivering leak-free
+                        results across terraces, bathrooms, sumps, tanks, skylights, and more — all without disrupting
+                        your structure.</p>
+                    <div class="about-points">
+                        <div class="point">
+                            <div class="point-icon">✅</div>
+                            <p>Zero Structural Damage</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">🔬</div>
+                            <p>Premium Quality Materials</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">🛡️</div>
+                            <p>Workmanship Warranty</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">⚡</div>
+                            <p>Fast & Clean Execution</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">📞</div>
+                            <p>Post-Service Support</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">💰</div>
+                            <p>Competitive Pricing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:10px" class="reveal">
+                <div class="section-label">How It Works</div>
+                <div class="section-title" style="color:#fff">Our Simple <span style="color:var(--accent)">4-Step</span>
+                    Process</div>
+            </div>
+            <div class="process-steps">
+                <div class="step reveal">
+                    <div class="step-num">01</div>
+                    <h3>Free Inspection</h3>
+                    <p>Our expert visits your site, assesses the problem areas and identifies root causes.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">02</div>
+                    <h3>Custom Proposal</h3>
+                    <p>We provide a detailed, transparent quotation with the best solution for your needs.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">03</div>
+                    <h3>Expert Execution</h3>
+                    <p>Our trained technicians apply proven waterproofing systems with precision.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">04</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>We stand behind our work with a written warranty and post-service follow-up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section id="clients">
+        <div class="container">
+            <div class="clients-header reveal">
+                <div class="section-label">Trusted By</div>
+                <div class="section-title">Our <span>Valued Clients</span></div>
+                <p class="section-desc" style="margin:0 auto">We have successfully completed waterproofing projects for
+                    leading organisations across Bangalore and Karnataka.</p>
+            </div>
+            <div class="clients-track-wrap">
+                <div class="clients-track" id="clientsTrack">
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777563957201_image.png"
+                            alt="Fortis Hospital"></div>
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777563975039_image.png" alt="Biocon">
+                    </div>
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777563991694_image.png"
+                            alt="Kauvery Hospital"></div>
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777564013428_image.png"
+                            alt="Global Calcium"></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777563957201_image.png"
+                            alt="Fortis Hospital"></div>
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777563975039_image.png" alt="Biocon">
+                    </div>
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777563991694_image.png"
+                            alt="Kauvery Hospital"></div>
+                    <div class="client-logo"><img src="/mnt/user-data/uploads/1777564013428_image.png"
+                            alt="Global Calcium"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why">
+        <div class="container">
+            <div class="why-grid">
+                <div class="reveal-left">
+                    <div class="section-label">Why Choose Us</div>
+                    <div class="section-title">The MWP <span>Difference</span></div>
+                    <div class="features-list" style="margin-top:30px">
+                        <div class="feature">
+                            <div class="feat-icon">🛡️</div>
+                            <div>
+                                <h4>Non-Destructive Method</h4>
+                                <p>We fix waterproofing problems without breaking tiles, floors, or walls. Zero damage
+                                    to your finished interiors.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feat-icon">🔬</div>
+                            <div>
+                                <h4>Premium Materials</h4>
+                                <p>We use only ISI-certified, industry-grade waterproofing compounds sourced from
+                                    trusted manufacturers.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feat-icon">⏱️</div>
+                            <div>
+                                <h4>On-Time Delivery</h4>
+                                <p>Committed to timelines. Our projects are completed on schedule with minimal
+                                    disruption to your daily life.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feat-icon">📋</div>
+                            <div>
+                                <h4>Written Warranty</h4>
+                                <p>We provide a documented service warranty on all projects, ensuring peace of mind for
+                                    years to come.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="why-visual">
+                        <h3>Service Coverage Areas</h3>
+                        <p style="color:#a8c4e0;font-size:0.88rem;margin-bottom:24px">We serve across Bangalore &
+                            surrounding regions</p>
+                        <div class="coverage-grid">
+                            <div class="coverage-item">
+                                <div class="ci">🏘️</div>
+                                <p>Peenya & North Bangalore</p>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="ci">🏢</div>
+                                <p>Central Bangalore</p>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="ci">🌆</div>
+                                <p>East Bangalore</p>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="ci">🏠</div>
+                                <p>South Bangalore</p>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="ci">🏗️</div>
+                                <p>Electronic City</p>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="ci">🌇</div>
+                                <p>Whitefield & Beyond</p>
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top:28px;padding:18px;background:rgba(255,255,255,0.07);border-radius:10px;border-left:3px solid var(--accent)">
+                            <p style="color:#a8c4e0;font-size:0.85rem;font-style:italic">"Water Proofing Solution
+                                without disturbing the structures"</p>
+                            <p style="color:#fff;font-size:0.82rem;margin-top:6px;font-weight:600">— Mrutyunkshappa H.,
+                                Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="testi-header reveal">
+                <div class="section-label">What Clients Say</div>
+                <div class="section-title">Customer <span>Reviews</span></div>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>Manjunatha Water Proofing fixed our 5-year-old terrace leak in just 2 days without breaking a
+                        single tile. Absolutely outstanding workmanship and very professional team.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">R</div>
+                        <div>
+                            <h5>Ramesh Kumar</h5><span>Peenya, Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>We hired them for our bathroom waterproofing. The non-destructive approach saved us so much
+                        hassle. No mess, no breaking of tiles, and no leakage since then — it's been 18 months.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">P</div>
+                        <div>
+                            <h5>Priya Sharma</h5><span>Yeshwantpur, Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>Excellent service for our commercial building's sump waterproofing. The team was knowledgeable,
+                        prompt, and the pricing was very competitive. Highly recommend for any waterproofing needs.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">S</div>
+                        <div>
+                            <h5>Suresh Babu</h5><span>Hebbal, Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="section-label">Get In Touch</div>
+                    <div class="section-title">Let's Fix Your <span>Leakage Problem</span></div>
+                    <p>Contact us today for a free on-site inspection and detailed quote. We'll assess your
+                        waterproofing needs and provide the most effective, cost-efficient solution.</p>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h5>Office Address</h5>
+                            <p># 261, 11th Main, Peenya 1st Stage (SRS), Bangalore – 560058</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h5>Phone Numbers</h5>
+                            <p><a href="tel:9900497309">9900497309</a> &nbsp;|&nbsp; <a
+                                    href="tel:8792232753">8792232753</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h5>Email Address</h5>
+                            <p><a href="mailto:manjunathratna077@gmail.com">manjunathratna077@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h5>Working Hours</h5>
+                            <p>Monday – Saturday: 8:00 AM – 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form reveal-right">
+                    <h3>Get a Free Quote</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+91 XXXXXXXXXX">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Required</label>
+                        <select>
+                            <option value="">Select a service...</option>
+                            <option>Terrace Waterproofing</option>
+                            <option>Bathroom Waterproofing</option>
+                            <option>Slab Waterproofing</option>
+                            <option>Sump & Tank Waterproofing</option>
+                            <option>Skylight & AC Sheet Sealing</option>
+                            <option>Wall Crack Treatment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Property Location</label>
+                        <input type="text" placeholder="Area / Locality in Bangalore">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Describe your waterproofing problem..."></textarea>
+                    </div>
+                    <button class="btn-submit" onclick="handleSubmit(event)">📩 Request Free Inspection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="/mnt/user-data/uploads/1777564066474_WhatsApp_Image_2026-04-29_at_8_11_59_AM.jpeg"
+                    alt="MWP Logo" style="height:60px;border-radius:8px" onerror="this.style.display='none'">
+                <p style="margin-top:14px">Manjunatha Water Proofing is Bangalore's trusted waterproofing contractor,
+                    providing permanent, non-destructive solutions for over 15 years. Your leakage problems end here.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Terrace Waterproofing</a></li>
+                    <li><a href="#services">Bathroom Waterproofing</a></li>
+                    <li><a href="#services">Slab Waterproofing</a></li>
+                    <li><a href="#services">Sump & Tank</a></li>
+                    <li><a href="#services">Wall Crack Treatment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:9900497309">📞 9900497309</a></li>
+                    <li><a href="tel:8792232753">📞 8792232753</a></li>
+                    <li><a href="mailto:manjunathratna077@gmail.com">✉️ Email Us</a></li>
+                    <li><a href="#contact">📍 Peenya, Bangalore</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Manjunatha Water Proofing. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-btn" title="WhatsApp">💬</a>
+                <a href="#" class="social-btn" title="Facebook">📘</a>
+                <a href="#" class="social-btn" title="Instagram">📷</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <a href="tel:9900497309" class="floating-call" title="Call Now">📞</a>
+
+    <script>
+        // Rain drops
+        const rainContainer = document.getElementById('raindrops');
+        for (let i = 0; i < 40; i++) {
+            const d = document.createElement('div');
+            d.className = 'drop';
+            d.style.left = Math.random() * 100 + '%';
+            d.style.height = (30 + Math.random() * 60) + 'px';
+            d.style.animationDuration = (0.6 + Math.random() * 1.4) + 's';
+            d.style.animationDelay = (Math.random() * 2) + 's';
+            rainContainer.appendChild(d);
+        }
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+        document.addEventListener('click', function (e) {
+            const m = document.getElementById('mobileMenu');
+            if (!e.target.closest('nav') && !e.target.closest('.mobile-menu')) {
+                m.classList.remove('open');
+            }
+        });
+
+        // Scroll reveal
+        const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+
+        // Form submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target;
+            btn.textContent = '✅ Request Sent! We\'ll Call You Soon';
+            btn.style.background = '#16a34a';
+            setTimeout(() => { btn.textContent = '📩 Request Free Inspection'; btn.style.background = ''; }, 4000);
+        }
+
+        // Nav scroll effect
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 60) {
+                nav.style.background = 'rgba(5,14,31,0.98)';
+            } else {
+                nav.style.background = 'rgba(10,25,60,0.97)';
+            }
+        });
+
+        // Stat counter animation
+        function animateCounters() {
+            document.querySelectorAll('.stat-num').forEach(el => {
+                const target = parseInt(el.textContent);
+                if (isNaN(target)) return;
+                const suffix = el.textContent.replace(/[0-9]/g, '');
+                let count = 0; const inc = Math.ceil(target / 40);
+                const t = setInterval(() => {
+                    count += inc;
+                    if (count >= target) { count = target; clearInterval(t); }
+                    el.textContent = count + suffix;
+                }, 35);
+            });
+        }
+        const statsObs = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) { animateCounters(); statsObs.disconnect(); }
+        });
+        const statsEl = document.querySelector('.hero-stats');
+        if (statsEl) statsObs.observe(statsEl);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+/* ===== ABOUT ===== */
+.about {
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-main-img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--accent);
+  color: #fff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(213, 45, 45, 0.4);
+}
+
+.about-badge .num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  display: block;
+}
+
+.about-badge .lbl {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.about-points {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.point-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  background: var(--blue-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.point p {
+  font-size: 0.88rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-badge {
+    bottom: -10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,10 @@
+/* App-level section spacing */
+section {
+  padding: 80px 5%;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 60px 5%;
+  }
+}

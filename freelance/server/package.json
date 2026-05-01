@@ -1,0 +1,20 @@
+{
+  "name": "mwp-server",
+  "version": "1.0.0",
+  "description": "Manjunatha Water Proofing — Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "author": "Manjunatha Water Proofing",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.0.0",
+    "nodemailer": "^8.0.7"
+  }
+}
