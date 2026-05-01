@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { label: 'Home', href: '#hero' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Clients', href: '#clients' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -47,7 +48,7 @@ export default function Navbar({ onBookClick }) {
         </ul>
 
         <div className="nav-actions">
-          <a href="tel:8792232753" className="nav-cta-outline">📞 Call Now</a>
+          <a href="tel:9900497309" className="nav-cta-outline">📞 Call Now</a>
           <button className="nav-cta" onClick={onBookClick}>
             🔧 Book Free Inspection
           </button>
@@ -77,8 +78,8 @@ export default function Navbar({ onBookClick }) {
         <button className="mobile-cta" onClick={() => { closeMenu(); onBookClick(); }}>
           🔧 Book Free Inspection
         </button>
-        <a href="tel:8792232753" className="mobile-cta" onClick={closeMenu} style={{ color: '#e53935' }}>
-          📞 8792232753
+        <a href="tel:9900497309" className="mobile-cta" onClick={closeMenu} style={{ color: '#e53935' }}>
+          📞 9900497309
         </a>
       </div>
     </>

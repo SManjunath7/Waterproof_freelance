@@ -45,7 +45,7 @@ export default function About() {
               <path d="M0 325 Q125 310 250 325 Q375 340 500 325" stroke="rgba(100,160,255,0.3)" strokeWidth="2.5" fill="none" />
             </svg>
             <div className="about-badge">
-              <span className="num">15+</span>
+              <span className="num">10+</span>
               <div className="lbl">Years of<br />Excellence</div>
             </div>
           </div>

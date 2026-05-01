@@ -1,6 +1,7 @@
 /* ===== TESTIMONIALS ===== */
 .testimonials {
   background: var(--off-white);
+  position: relative;
 }
 
 .testi-header {
@@ -20,11 +21,13 @@
   padding: 32px;
   position: relative;
   box-shadow: var(--shadow-md);
-  transition: transform 0.3s;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .testi-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
 }
 
 .testi-card::before {
@@ -38,10 +41,28 @@
   line-height: 1;
 }
 
+.testi-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-light), var(--accent));
+  border-radius: 0 0 16px 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.testi-card:hover::after {
+  opacity: 1;
+}
+
 .stars {
   color: #f59e0b;
   font-size: 1rem;
   margin-bottom: 14px;
+  letter-spacing: 2px;
 }
 
 .testi-card .testi-body {
@@ -68,6 +89,7 @@
   font-weight: 700;
   color: #fff;
   font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 184, 0.3);
 }
 
 .testi-author h5 {

@@ -1,6 +1,19 @@
 /* ===== PROCESS ===== */
 .process {
   background: linear-gradient(135deg, #0f1d36 0%, #1a3a6e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.process::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(37, 99, 184, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(229, 57, 53, 0.08) 0%, transparent 40%);
 }
 
 .process .section-title {
@@ -18,6 +31,8 @@
 .process-header {
   text-align: center;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .process-steps {
@@ -26,6 +41,7 @@
   gap: 0;
   margin-top: 56px;
   position: relative;
+  z-index: 1;
 }
 
 .process-steps::before {
@@ -35,7 +51,7 @@
   left: 10%;
   right: 10%;
   height: 2px;
-  background: linear-gradient(90deg, var(--blue-light), var(--accent));
+  background: linear-gradient(90deg, var(--blue-light), var(--accent), var(--blue-light));
 }
 
 .step {
@@ -59,11 +75,12 @@
   position: relative;
   z-index: 1;
   box-shadow: 0 6px 24px rgba(213, 45, 45, 0.3);
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 
 .step:hover .step-num {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 10px 35px rgba(213, 45, 45, 0.5);
 }
 
 .step h3 {

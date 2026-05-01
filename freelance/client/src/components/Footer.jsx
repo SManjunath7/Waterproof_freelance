@@ -10,7 +10,7 @@ export default function Footer() {
           <img src={logo} alt="MWP Logo" />
           <p>
             Manjunatha Water Proofing is Bangalore's trusted waterproofing contractor,
-            providing permanent, non-destructive solutions for over 15 years.
+            providing permanent, non-destructive solutions for over 10 years.
             Your leakage problems end here.
           </p>
         </div>
