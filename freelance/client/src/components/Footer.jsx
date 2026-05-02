@@ -29,8 +29,8 @@ export default function Footer() {
           <ul>
             <li><a href="tel:8792232753">📞 8792232753</a></li>
             <li><a href="tel:9900497309">📞 9900497309</a></li>
-            <li><a href="mailto:manjunathratna077@gmail.com">✉️ Email Us</a></li>
-            <li><a href="#contact">📍 Makali, Bangalore</a></li>
+            <li><a href="mailto:manjunathratna077@gmail.com" target="_blank" rel="noopener noreferrer">✉️ Email Us</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Makali,+Bengaluru,+Karnataka+562162" target="_blank" rel="noopener noreferrer">📍 Makali, Bangalore</a></li>
           </ul>
         </div>
       </div>
