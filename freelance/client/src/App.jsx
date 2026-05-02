@@ -34,7 +34,7 @@ function App() {
     )
     revealEls.forEach((el) => io.observe(el))
     return () => io.disconnect()
-  })
+  }, [])
 
   const showToast = (message, type = 'success') => {
     setToast({ message, type })

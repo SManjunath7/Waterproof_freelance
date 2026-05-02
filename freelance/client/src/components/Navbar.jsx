@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/manjunatha_enhanced.png'
 import './Navbar.css'
 
 const NAV_ITEMS = [
@@ -48,7 +48,7 @@ export default function Navbar({ onBookClick }) {
         </ul>
 
         <div className="nav-actions">
-          <a href="tel:9900497309" className="nav-cta-outline">📞 Call Now</a>
+          <a href="tel:9900497309" className="nav-cta-outline">📞 9900497309</a>
           <button className="nav-cta" onClick={onBookClick}>
             🔧 Book Free Inspection
           </button>
