@@ -7,7 +7,6 @@ export default function BookingModal({ onClose, showToast }) {
     <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="booking-modal">
         <button className="modal-close" onClick={onClose} aria-label="Close">✕</button>
-        <div className="modal-header-icon">📅</div>
         <h2>Book Free Inspection</h2>
         <p className="modal-sub">Schedule your on-site inspection instantly via Calendly.</p>
 
