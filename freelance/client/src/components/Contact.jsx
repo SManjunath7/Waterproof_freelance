@@ -1,76 +1,88 @@
-import React, { useState } from 'react'
-import './Contact.css'
+import React, { useState } from "react";
+import "./Contact.css";
 
-const API_URL = import.meta.env.VITE_API_URL || ''
+const API_URL = import.meta.env.VITE_API_URL || "";
 
 const SERVICES = [
-  'Terrace Waterproofing',
-  'Bathroom Waterproofing',
-  'Slab Waterproofing',
-  'Sump & Tank Waterproofing',
-  'Skylight & AC Sheet Sealing',
-  'Wall Crack Treatment',
-  'Other',
-]
+  "Terrace Waterproofing",
+  "Bathroom Waterproofing",
+  "Slab Waterproofing",
+  "Sump & Tank Waterproofing",
+  "Skylight & AC Sheet Sealing",
+  "Wall Crack Treatment",
+  "Other",
+];
 
-const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyeRB_pCRzDA7JQgzrw1V5mfNnGZ9AlAkPvSi51US_INrHZ2w5feL0t8gXOEvbZNpOt5A/exec"
+const GOOGLE_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbyeRB_pCRzDA7JQgzrw1V5mfNnGZ9AlAkPvSi51US_INrHZ2w5feL0t8gXOEvbZNpOt5A/exec";
 
 export default function Contact({ showToast }) {
   const [form, setForm] = useState({
-    name: '', phone: '', service: '', location: '', message: '',
-  })
-  const [loading, setLoading] = useState(false)
+    name: "",
+    phone: "",
+    service: "",
+    location: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!form.name || !form.message) {
-      showToast('Please fill in your name and message.', 'error')
-      return
+      showToast("Please fill in your name and message.", "error");
+      return;
     }
-    setLoading(true)
+    setLoading(true);
 
     // 1. Send to Google Sheets IMMEDIATELY (Fire and forget)
     if (GOOGLE_SHEET_URL) {
       try {
         // We use fetch without await so it happens in the background
         fetch(GOOGLE_SHEET_URL, {
-          method: 'POST',
-          mode: 'no-cors', 
-          headers: { 'Content-Type': 'application/json' },
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(form),
-        }).then(() => console.log("Sent to Google Sheets"))
-          .catch(err => console.error("Google Sheet Error:", err))
+        })
+          .then(() => console.log("Sent to Google Sheets"))
+          .catch((err) => console.error("Google Sheet Error:", err));
       } catch (err) {
-        console.error("Fetch block error:", err)
+        console.error("Fetch block error:", err);
       }
     }
 
     try {
       // 2. Send to Backend
       const res = await fetch(`${API_URL}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
-      })
-      const data = await res.json()
+      });
+      const data = await res.json();
 
       if (data.success) {
-        showToast('✅ Request sent! We will contact you soon.')
-        setForm({ name: '', phone: '', service: '', location: '', message: '' })
+        showToast("✅ Request sent! We will contact you soon.");
+        setForm({
+          name: "",
+          phone: "",
+          service: "",
+          location: "",
+          message: "",
+        });
       } else {
-        showToast(data.message || 'Something went wrong.', 'error')
+        showToast(data.message || "Something went wrong.", "error");
       }
     } catch {
       // Even if backend fails, Google Sheets will have received it!
-      showToast('✅ Request sent! We will contact you soon.')
-      setForm({ name: '', phone: '', service: '', location: '', message: '' })
+      showToast("✅ Request sent! We will contact you soon.");
+      setForm({ name: "", phone: "", service: "", location: "", message: "" });
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   return (
     <section id="contact" className="contact-section">
@@ -78,10 +90,13 @@ export default function Contact({ showToast }) {
         <div className="contact-grid">
           <div className="contact-info reveal-left">
             <div className="section-label">Get In Touch</div>
-            <div className="section-title">Let's Fix Your <span>Leakage Problem</span></div>
+            <div className="section-title">
+              Let's Fix Your <span>Leakage Problem</span>
+            </div>
             <p>
-              Contact us today for a free on-site inspection and detailed quote. We'll assess
-              your waterproofing needs and provide the most effective, cost-efficient solution.
+              Contact us today for a free on-site inspection and detailed quote.
+              We'll assess your waterproofing needs and provide the most
+              effective, cost-efficient solution.
             </p>
 
             <div className="info-item">
@@ -95,14 +110,21 @@ export default function Contact({ showToast }) {
               <div className="info-icon">📞</div>
               <div>
                 <h5>Phone Numbers</h5>
-                <p><a href="tel:9900497309">9900497309</a> &nbsp;|&nbsp; <a href="tel:8792232753">8792232753</a></p>
+                <p>
+                  <a href="tel:9900497309">9900497309</a> &nbsp;|&nbsp;{" "}
+                  <a href="tel:8792232753">8792232753</a>
+                </p>
               </div>
             </div>
             <div className="info-item">
               <div className="info-icon">✉️</div>
               <div>
                 <h5>Email Address</h5>
-                <p><a href="mailto:manjunathawaterproofing@gmail.com">manjunathawaterproofing@gmail.com</a></p>
+                <p>
+                  <a href="mailto:manjunathawaterproofing@gmail.com">
+                    manjunathawaterproofing@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
             <div className="info-item">
@@ -151,7 +173,9 @@ export default function Contact({ showToast }) {
               >
                 <option value="">Select a service...</option>
                 {SERVICES.map((s) => (
-                  <option key={s} value={s}>{s}</option>
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
                 ))}
               </select>
             </div>
@@ -178,11 +202,11 @@ export default function Contact({ showToast }) {
               />
             </div>
             <button type="submit" className="btn-submit" disabled={loading}>
-              {loading ? '⏳ Sending...' : '📩 Request Free Inspection'}
+              {loading ? "⏳ Sending..." : "📩 Request Free Inspection"}
             </button>
           </form>
         </div>
       </div>
     </section>
-  )
+  );
 }
