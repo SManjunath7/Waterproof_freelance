@@ -102,7 +102,7 @@ export default function Contact({ showToast }) {
               <div className="info-icon">✉️</div>
               <div>
                 <h5>Email Address</h5>
-                <p><a href="mailto:manjunathratna077@gmail.com">manjunathratna077@gmail.com</a></p>
+                <p><a href="mailto:manjunathawaterproofing@gmail.com">manjunathawaterproofing@gmail.com</a></p>
               </div>
             </div>
             <div className="info-item">
