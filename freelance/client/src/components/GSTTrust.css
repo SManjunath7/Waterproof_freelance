@@ -1,0 +1,144 @@
+.gst-trust {
+  background: linear-gradient(180deg, var(--off-white) 0%, #eef4fb 100%);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+[data-theme='dark'] .gst-trust {
+  background: linear-gradient(180deg, var(--off-white) 0%, rgba(37, 99, 184, 0.08) 100%);
+}
+
+.gst-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 48px;
+  border: 1px solid rgba(37, 99, 184, 0.14);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 18px 50px rgba(15, 29, 54, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.gst-card::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  top: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(37, 99, 184, 0.05);
+}
+
+.gst-intro {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.gst-seal {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #15803d, #22c55e);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(21, 128, 61, 0.25);
+}
+
+.gst-intro .section-title { margin-bottom: 12px; }
+.gst-intro p { color: var(--gray); line-height: 1.75; max-width: 440px; }
+
+.gst-cta {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 22px;
+  color: var(--blue-light);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.gst-cta span { transition: transform 0.2s; }
+.gst-cta:hover span { transform: translateX(4px); }
+
+.gst-details {
+  position: relative;
+  z-index: 1;
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: var(--off-white);
+  border: 1px solid rgba(37, 99, 184, 0.1);
+}
+
+.gst-detail {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(15, 29, 54, 0.08);
+}
+
+.gst-detail:last-of-type { border-bottom: 0; }
+.gst-detail span { color: var(--gray); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.gst-detail strong { color: var(--dark); font-size: 0.92rem; line-height: 1.55; }
+.gst-note { margin-top: 14px; color: #15803d; font-size: 0.8rem; font-weight: 700; }
+.gst-note span { margin-right: 7px; }
+
+@media (max-width: 800px) {
+  .gst-card { grid-template-columns: 1fr; gap: 30px; padding: 32px 24px; }
+}
+
+@media (max-width: 520px) {
+  .gst-trust { padding-top: 54px; padding-bottom: 54px; }
+  .gst-intro { gap: 14px; }
+  .gst-seal { flex-basis: 44px; width: 44px; height: 44px; font-size: 1.25rem; }
+  .gst-detail { grid-template-columns: 1fr; gap: 5px; }
+}
+
+.gst-verify-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-light);
+  padding: 8px 16px;
+  border: 1.5px solid var(--blue-light);
+  border-radius: 8px;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.gst-verify-link:hover {
+  background: var(--blue-pale);
+  transform: translateY(-1px);
+}
+
+.gst-govt-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #15803d;
+  background: rgba(21, 128, 61, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-left: 12px;
+}
+
+.gst-status {
+  color: #15803d;
+  font-weight: 700;
+}

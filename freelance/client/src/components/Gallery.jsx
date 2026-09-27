@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import galleryTerrace from '../assets/gallery-terrace.png'
 import galleryBathroom from '../assets/gallery-bathroom.png'
 import galleryWall from '../assets/gallery-wall.png'
@@ -51,6 +51,19 @@ const FILTERS = ['all', 'terrace', 'bathroom', 'wall', 'slab', 'sump', 'complete
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all')
   const [lightbox, setLightbox] = useState(null)
+
+  useEffect(() => {
+    if (!lightbox) return
+    document.body.style.overflow = 'hidden'
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') setLightbox(null)
+    }
+    window.addEventListener('keydown', handleEsc)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleEsc)
+    }
+  }, [lightbox])
 
   const filtered = activeFilter === 'all'
     ? GALLERY_ITEMS

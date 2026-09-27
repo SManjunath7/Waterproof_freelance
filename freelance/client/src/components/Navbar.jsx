@@ -8,13 +8,18 @@ const NAV_ITEMS = [
   { label: 'About', href: '#about' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Clients', href: '#clients' },
+  { label: 'Trust', href: '#trust' },
   { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar({ onBookClick }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved === 'dark';
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches || false;
+  })
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -24,6 +29,7 @@ export default function Navbar({ onBookClick }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light')
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light')
   }, [darkMode])
 
   const closeMenu = () => setMenuOpen(false)
@@ -56,6 +62,7 @@ export default function Navbar({ onBookClick }) {
             className="dark-toggle"
             onClick={() => setDarkMode(!darkMode)}
             title="Toggle dark mode"
+            aria-label="Toggle dark mode"
           >
             {darkMode ? '☀️' : '🌙'}
           </button>
@@ -63,6 +70,7 @@ export default function Navbar({ onBookClick }) {
             className={`hamburger${menuOpen ? ' open' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             <span /><span /><span />
           </button>

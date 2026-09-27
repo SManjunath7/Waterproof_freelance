@@ -18,7 +18,7 @@
 
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1.1fr 1fr;
   gap: 50px;
   margin-bottom: 36px;
   max-width: 1200px;

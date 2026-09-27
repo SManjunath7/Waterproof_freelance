@@ -39,6 +39,7 @@ export default function WhatsAppBtn() {
         rel="noopener noreferrer"
         style={STYLE}
         title="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp"
         id="whatsapp-btn"
       >
         <svg 

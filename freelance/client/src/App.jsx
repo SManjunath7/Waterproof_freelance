@@ -7,6 +7,7 @@ import Process from "./components/Process";
 import Gallery from "./components/Gallery";
 import Clients from "./components/Clients";
 import WhyUs from "./components/WhyUs";
+import GSTTrust from "./components/GSTTrust";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppBtn from "./components/WhatsAppBtn";
@@ -53,6 +54,7 @@ function App() {
         <Gallery />
         <Clients />
         <WhyUs />
+        <GSTTrust />
         <Contact showToast={showToast} />
       </main>
       <Footer />

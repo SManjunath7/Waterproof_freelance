@@ -20,6 +20,7 @@ export default function Contact({ showToast }) {
   const [form, setForm] = useState({
     name: "",
     phone: "",
+    email: "",
     service: "",
     location: "",
     message: "",
@@ -34,6 +35,12 @@ export default function Contact({ showToast }) {
     e.preventDefault();
     if (!form.name || !form.message) {
       showToast("Please fill in your name and message.", "error");
+      return;
+    }
+
+    const cleanPhone = form.phone.replace(/[\s-]/g, '');
+    if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+      showToast('Please enter a valid 10-digit Indian mobile number.', 'error');
       return;
     }
     setLoading(true);
@@ -69,6 +76,7 @@ export default function Contact({ showToast }) {
         setForm({
           name: "",
           phone: "",
+          email: "",
           service: "",
           location: "",
           message: "",
@@ -76,10 +84,9 @@ export default function Contact({ showToast }) {
       } else {
         showToast(data.message || "Something went wrong.", "error");
       }
-    } catch {
-      // Even if backend fails, Google Sheets will have received it!
-      showToast("✅ Request sent! We will contact you soon.");
-      setForm({ name: "", phone: "", service: "", location: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      showToast('Network error. Please try calling us at 9900497309.', 'error');
     }
     setLoading(false);
   };
@@ -103,7 +110,7 @@ export default function Contact({ showToast }) {
               <div className="info-icon">📍</div>
               <div>
                 <h5>Office Address</h5>
-                <p>#07, Huskur Road, Makali, Bengaluru – 562162</p>
+                <p>No. 06, Near Toll India, Huskur Main Road, Makali, Bengaluru – 562162</p>
               </div>
             </div>
             <div className="info-item">
@@ -159,6 +166,18 @@ export default function Contact({ showToast }) {
                   name="phone"
                   placeholder="+91 XXXXXXXXXX"
                   value={form.phone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="contact-email">Email (Optional)</label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  value={form.email}
                   onChange={handleChange}
                 />
               </div>

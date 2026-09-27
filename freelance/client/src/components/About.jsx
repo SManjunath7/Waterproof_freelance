@@ -58,7 +58,7 @@ export default function About() {
               non-destructive, permanent solutions for residential and commercial properties.
             </p>
             <p style={{ color: 'var(--gray)', fontSize: '0.9rem', lineHeight: '1.8', marginBottom: '24px' }}>
-              Our expert team led by <strong>Mrutyunkshappa H.</strong> brings years of on-site
+              Our expert team led by <strong>Sakshappa H.</strong> brings years of on-site
               experience in delivering leak-free results across terraces, bathrooms, sumps, tanks,
               skylights, and more — all without disrupting your structure.
             </p>

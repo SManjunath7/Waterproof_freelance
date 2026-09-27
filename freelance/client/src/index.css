@@ -2,8 +2,6 @@
    index.css — Global Design System for Manjunatha Water Proofing
    ═══════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 :root {
   --red: #d32f2f;
   --accent: #e53935;
